@@ -1,0 +1,93 @@
+{
+	"variables": [],
+	"info": {
+		"name": "gostack-desafio-01",
+		"_postman_id": "3e47b73f-508d-bf36-a865-afc3a1178b0a",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Listagem de todos os projetos",
+			"request": {
+				"url": "http://localhost:3000/projects",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Editar projeto",
+			"request": {
+				"url": "http://localhost:3000/projects/1",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\": \"Primeiro projeto alterado\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Criar projeto",
+			"request": {
+				"url": "http://localhost:3000/projects",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\": \"1\",\n\t\"title\": \"Primeiro projeto\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Deletar projeto",
+			"request": {
+				"url": "http://localhost:3000/projects/1",
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Criar tarefa no projeto",
+			"request": {
+				"url": "http://localhost:3000/projects/1/tasks",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\": \"tarefa 1\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
